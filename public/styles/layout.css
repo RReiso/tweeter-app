@@ -23,3 +23,16 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ 
+ /* || GENERAL STYLES */
+
+html {
+	scroll-behavior: smooth;
+	font-size: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
