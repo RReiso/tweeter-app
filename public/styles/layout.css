@@ -24,7 +24,7 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- 
+
  /* || GENERAL STYLES */
 
 html {
@@ -35,4 +35,5 @@ html {
 body {
 	margin: 0;
 	padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
 }
