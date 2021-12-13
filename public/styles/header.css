@@ -2,7 +2,7 @@ header{
   height: 400px;
   width: 100%;
   background-color: rgb(255, 255, 255);
-  color: rgb(254, 238, 255);
+  color: var(--color-light-text);
   background-image: url(../images/beige-paper-1920x1080.png);
   background-size: cover;
   background-position: center;
