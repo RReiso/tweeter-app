@@ -16,7 +16,7 @@ $(document).ready(function() {
     </div>
     <span class="tweet-author-handle">${tweetData.user.handle}</span>
     </div>
-    <p class="tweet-text">${tweetData.content.text}</p>
+    <p class="tweet-text">${escape(tweetData.content.text)}</p>
     </header>
     <footer>
     <span>${timeago.format(tweetData.created_at)}</span>
@@ -36,15 +36,14 @@ $(document).ready(function() {
   };
   
   const renderTweets = (tweets) => {
-    $('.all-tweets').html('');
+    $('.all-tweets').empty();
+    $('#tweet-text').val("");
     tweets.reverse();
     for (let tweet of tweets) {
       let newTweet = createTweetElement(tweet);
       $('.all-tweets').append(newTweet);
     }
   };
-  
-
 
   $(".tweet-form").on("submit", function(e) {
     e.preventDefault();
@@ -67,6 +66,12 @@ $(document).ready(function() {
       .then(loadTweets);
   
   });
+
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   loadTweets();
 });
