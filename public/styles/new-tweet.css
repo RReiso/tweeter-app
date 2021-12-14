@@ -39,9 +39,13 @@
   cursor: pointer;
   color: var(--color-light-text);
   background-color: var(--color-accent);
-  -webkit-box-shadow: 4px 4px 3px 0px rgba(50, 50, 50, 0.75);
+  /* -webkit-box-shadow: 4px 4px 3px 0px rgba(50, 50, 50, 0.75);
   -moz-box-shadow: 4px 4px 3px 0px rgba(50, 50, 50, 0.75);
-  box-shadow: 4px 4px 3px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 4px 4px 3px 0px rgba(50, 50, 50, 0.75); */
+  /* -moz-box-shadow:  5px 7px 15px -6px #000000; */
+  -webkit-box-shadow: 5px 7px 15px -1px #4A4A4A; 
+box-shadow: 5px 7px 15px -1px #4A4A4A;
+-moz-box-shadow: 5px 7px 15px -1px #4A4A4A;
 }
 
 .tweet-btn:hover {
