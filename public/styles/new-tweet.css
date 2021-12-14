@@ -15,7 +15,7 @@
 .tweet-input textarea {
   outline: none;
   resize: none;
-  border-bottom: 2px solid ;
+  border-bottom: 3px solid var(--color-dark-text);
   height: 40px;
   border-top-style: hidden;
   border-right-style: hidden;
@@ -57,4 +57,8 @@
 
 .red {
   color: red;
+}
+
+.counter {
+  text-shadow: 0 2px 3px #4A4A4A;
 }
