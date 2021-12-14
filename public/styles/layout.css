@@ -34,10 +34,11 @@ body {
 html {
 	scroll-behavior: smooth;
 	font-size: 100%;
-  --color-dark-text: rgba(43, 43, 46, 0.904);
+  --color-dark-text: #2b2b2ee7;
   --color-light-text: #FFFFFF;
   --color-primary: #3d9475;
   --color-accent: #4056A1;
+  --color-grey: #2b2b2ea2;
 }
 
 body {

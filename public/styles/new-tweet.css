@@ -15,7 +15,7 @@
 .tweet-input textarea {
   outline: none;
   resize: none;
-  border-bottom: 3px solid var(--color-dark-text);
+  border-bottom: 3px solid var(--color-grey);
   height: 40px;
   border-top-style: hidden;
   border-right-style: hidden;
@@ -23,6 +23,10 @@
   background-color: inherit;
   font-size: 16px;
   font-weight: bold;
+}
+
+.tweet-input textarea:focus {
+  border-bottom: 3px solid var(--color-primary);
 }
 
 .tweet-submit {
