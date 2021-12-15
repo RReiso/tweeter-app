@@ -78,6 +78,13 @@ $(document).ready(function() {
     $(this).fadeOut("fast");
   });
 
+  $(".double-arrow").click(function() {
+    $(".new-tweet").animate({
+      left: "+=50",
+      height: "toggle"
+    }, 1000);
+  });
+
   loadTweets();
 });
 

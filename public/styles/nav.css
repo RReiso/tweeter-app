@@ -24,5 +24,11 @@ nav{
 
 .double-arrow{
   cursor: pointer;
+  padding-top: 1rem;
+  cursor: pointer;
   color: red;
+}
+
+.double-arrow:hover {
+  color: rgb(204, 0, 0);
 }
