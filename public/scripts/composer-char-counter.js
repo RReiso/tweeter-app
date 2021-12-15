@@ -26,4 +26,18 @@ $(document).ready(function() {
     }, 600);
   });
 
+  $("#toTop").on("click", function() {
+    //html works for FFX
+    //body works for Chrome
+    $("html, body").animate({scrollTop: 0}, 0);
+  });
+
+  $(window).on("scroll", function() {
+    if ($(this).scrollTop() - 300 > 0) {
+      $('#toTop').stop().slideDown('fast'); // show the button
+    } else {
+      $('#toTop').stop().slideUp('fast'); // hide the button
+    }
+  });
+
 });
