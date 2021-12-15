@@ -17,9 +17,11 @@ nav{
 }
 
 .nav-right{
+  padding-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100px;
 }
 
 .double-arrow{
@@ -31,4 +33,9 @@ nav{
 
 .double-arrow:hover {
   color: rgb(204, 0, 0);
+}
+
+#slider {
+  height: 11px;
+  background-color: seashell;
 }

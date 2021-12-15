@@ -78,11 +78,19 @@ $(document).ready(function() {
     $(this).fadeOut("fast");
   });
 
-  $(".double-arrow").click(function() {
+  const arrowMove = () => {
+    $("#slider").animate({height: "toggle"}, {
+      duration: 800,
+      easing: 'swing',
+      complete: arrowMove
+    });
+  };
+  arrowMove();
+
+  $(".double-arrow").on("click", function() {
     $(".new-tweet").animate({
-      left: "+=50",
       height: "toggle"
-    }, 1000);
+    }, 600);
   });
 
   loadTweets();
