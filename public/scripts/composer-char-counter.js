@@ -30,12 +30,18 @@ $(document).ready(function() {
     //html works for FFX
     //body works for Chrome
     $("html, body").animate({scrollTop: 0}, 0);
+    $(".new-tweet").animate({
+      height: "show"
+    }, 600);
+    $("#tweet-text").focus();
   });
 
   $(window).on("scroll", function() {
-    if ($(this).scrollTop() - 300 > 0) {
+    if ($(this).scrollTop() - 200 > 0) {
+      $(".double-arrow").fadeOut("fast");
       $('#toTop').stop().slideDown('fast'); // show the button
     } else {
+      $(".double-arrow").fadeIn("fast");
       $('#toTop').stop().slideUp('fast'); // hide the button
     }
   });
