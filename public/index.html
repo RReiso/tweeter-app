@@ -45,32 +45,34 @@
     </nav>
 
     <!-- Header -->
-    <header class="user-profile">
-      <div class="user">
-          <img src="/images/profile-hex.png"> 
-          <h2>Your <span class="user-last-name">Name</span></h2>
-      </div>
-    </header>
+    <div class="main-layout">
+      <header class="user-profile">
+        <div class="user">
+            <img src="/images/profile-hex.png"> 
+            <h2>Your <span class="user-last-name">Name</span></h2>
+        </div>
+      </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <div class="error"></div>
-        <form class="tweet-form" method="POST" action="/tweets">
-          <div class="tweet-input">
-            <label for="tweet-text">What are you humming about?</label>
-            <textarea name="text" id="tweet-text"></textarea>
-          </div>
-          <div class="tweet-submit">
-            <button class="tweet-btn" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <section class="all-tweets"></section>
-      <button id="toTop">
-        <i class="fas fa-angle-double-up"></i>
-      </button>
-    </main>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <div class="error"></div>
+          <form class="tweet-form" method="POST" action="/tweets">
+            <div class="tweet-input">
+              <label for="tweet-text">What are you humming about?</label>
+              <textarea name="text" id="tweet-text"></textarea>
+            </div>
+            <div class="tweet-submit">
+              <button class="tweet-btn" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <section class="all-tweets"></section>
+        <button id="toTop">
+          <i class="fas fa-angle-double-up"></i>
+        </button>
+      </main>
+  </div>
   </body>
 </html>

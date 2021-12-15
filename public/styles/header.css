@@ -25,3 +25,22 @@
  font-weight: 300;
 
 }
+
+@media screen and (min-width: 48em) {
+  .main-layout {
+    display: flex;
+    padding-top: 180px;
+    margin: 0 2rem;
+  }
+ 
+  .user-profile {
+    margin: 3rem 5rem 3rem 3rem;
+    height: 400px;
+    max-width: 460px;
+    border-radius: 4px;
+  }
+ 
+  .user {
+    padding: 3rem 2rem;
+  }
+ }
