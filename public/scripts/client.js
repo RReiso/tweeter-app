@@ -36,35 +36,36 @@ $(document).ready(function() {
   };
   
   const renderTweets = (tweets) => {
-    $('.all-tweets').empty();
-    $('#tweet-text').val("");
+    $(".counter").text("140");
+    $(".error").removeClass("display");
+    $(".all-tweets").empty();
+    $("#tweet-text").val("");
     tweets.reverse();
     for (let tweet of tweets) {
       let newTweet = createTweetElement(tweet);
-      $('.all-tweets').append(newTweet);
+      $(".all-tweets").append(newTweet);
     }
   };
 
   $(".tweet-form").on("submit", function(e) {
     e.preventDefault();
+    const tweetText = $("#tweet-text").val();
+    
+    if (tweetText.trim() === "") {
+      $(".error").text("Tweet cannot be empty!");
+      $(".error").addClass("display");
+      return;
+    }
+    
+    if (tweetText.length > 140) {
+      $(".error").text("Tweet is too long!");
+      $(".error").addClass("display");
+      return;
+    }
+    
     const formData = $(this).serialize();
-    const validData = formData.slice(5);
-    const regex = /%20/g;
-    const isEmptyString = validData.replace(regex, "") === "";
-  
-    if (!validData || isEmptyString) {
-      alert("Tweet cannot be empty!");
-      return;
-    }
-  
-    if (validData.length > 140) {
-      alert("Tweet is too long!");
-      return;
-    }
-  
     $.ajax('/tweets', { method: 'POST', data: formData })
       .then(loadTweets);
-  
   });
 
   const escape = function(str) {
@@ -72,6 +73,10 @@ $(document).ready(function() {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
+
+  $(".error").on("click", function(e) {
+    $(this).removeClass("display");
+  });
 
   loadTweets();
 });
