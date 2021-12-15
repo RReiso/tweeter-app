@@ -19,6 +19,7 @@
 
 .tweet-author {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -26,14 +27,20 @@
 .tweet-author div {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.tweet-author img {
+  padding-right: 0.5rem;
 }
 
 .tweet-author-name {
   font-weight: 300;
-  padding-left: 1rem;
+  padding-top: 0.5rem;
 }
 
 .tweet-author-handle{
+  padding-top:0.25rem;
   color: #a8a7a7;
 }
 

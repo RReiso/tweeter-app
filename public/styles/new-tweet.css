@@ -43,8 +43,8 @@
   font-weight: bold;
 }
 
-.tweet-input textarea:focus {
-  border-bottom: 3px solid var(--color-primary);
+.tweet-input textarea:focus-visible {
+  border-bottom: 4px solid var(--color-primary);
 }
 
 .tweet-submit {
@@ -73,7 +73,7 @@
 	opacity: 0.9;
 }
 
-.tweet-btn:focus {
+.tweet-btn:focus-visible, .tweet-btn:active {
 	box-shadow: 0 0 0 0.2rem #2b3a6d;
 }
 
