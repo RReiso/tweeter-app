@@ -37,7 +37,7 @@ $(document).ready(function() {
   
   const renderTweets = (tweets) => {
     $(".counter").text("140");
-    $(".error").removeClass("display");
+    $(".error").fadeOut("fast");
     $(".all-tweets").empty();
     $("#tweet-text").val("");
     tweets.reverse();
@@ -53,13 +53,13 @@ $(document).ready(function() {
     
     if (tweetText.trim() === "") {
       $(".error").text("Tweet cannot be empty!");
-      $(".error").addClass("display");
+      $(".error").fadeIn("fast");
       return;
     }
     
     if (tweetText.length > 140) {
       $(".error").text("Tweet is too long!");
-      $(".error").addClass("display");
+      $(".error").fadeIn("fast");
       return;
     }
     
@@ -75,7 +75,7 @@ $(document).ready(function() {
   };
 
   $(".error").on("click", function(e) {
-    $(this).removeClass("display");
+    $(this).fadeOut("fast");
   });
 
   loadTweets();

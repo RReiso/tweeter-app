@@ -39,6 +39,8 @@
 
 .tweet-text {
   padding: 1.5rem 0;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
 
 .tweet footer {
