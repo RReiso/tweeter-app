@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  
   // display the remaining character number
   $("#tweet-text").on("keyup", function(e) {
     const textLength = $(this).val().length;
@@ -28,6 +29,7 @@ $(document).ready(function() {
     $(".new-tweet").animate({
       height: "toggle"
     }, 600);
+    $("#tweet-text").focus();
   });
 
   // animate toTop button and show tweet creation area
@@ -47,6 +49,7 @@ $(document).ready(function() {
     } else {
       $(".nav-right").fadeIn("fast");
       $('#toTop').stop().slideUp('fast'); // hide the button
+      $('#toTop').unbind('mouseenter').unbind('mouseleave');
     }
   });
 });

@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+  // escape function to transform possible malicious strings from user inputs
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   // create an HTML markup for a new tweet
   const createTweetElement = (tweetData) => {
     const tweet = `<article class="tweet">
@@ -27,32 +34,31 @@ $(document).ready(function() {
 
   // fetch tweets
   const loadTweets = () => {
-    $.ajax(' http://localhost:8080/tweets', { method: 'GET' })
+    $.ajax('/tweets', { method: 'GET' })
       .done(tweets => renderTweets(tweets))
       .fail(function(jqXHR, textStatus) {
         alert("Request failed: " + textStatus);
       });
   };
-  
+
   // reset new-tweet creation area and display tweets
   const renderTweets = (tweets) => {
     $(".counter").text("140");
     $(".error").fadeOut("fast");
     $(".all-tweets").empty();
     $("#tweet-text").val("");
-    tweets.reverse();
     for (let tweet of tweets) {
       let newTweet = createTweetElement(tweet);
-      $(".all-tweets").append(newTweet);
+      $(".all-tweets").prepend(newTweet);
     }
   };
 
-  // validate form data and make a post request
+  // set listener for tweet button
   $(".tweet-form").on("submit", function(e) {
     e.preventDefault();
     const tweetText = $("#tweet-text").val();
     
-    // display errors
+    // validate form data and display errors
     if (tweetText.trim() === "") {
       $(".error").text("Tweet cannot be empty!");
       $(".error").fadeIn("fast");
@@ -65,6 +71,7 @@ $(document).ready(function() {
       return;
     }
     
+    // serialize and make a post request
     const formData = $(this).serialize();
     $.ajax('/tweets', { method: 'POST', data: formData })
       .done(loadTweets)
@@ -72,14 +79,7 @@ $(document).ready(function() {
         alert("Request failed: " + textStatus);
       });
   });
-
-  // escape function to transform possible malicious strings from user inputs
-  const escape = function(str) {
-    let div = document.createElement("div");
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
-  };
-
+  
   // fetch tweets on page load
   loadTweets();
 });
