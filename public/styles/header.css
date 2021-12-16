@@ -1,7 +1,6 @@
 .user-profile{
   height: 520px;
   width: 100%;
-  background-color: rgb(255, 255, 255);
   color: var(--color-light-text);
   background-image: url(../images/beige-paper-1920x1080.png);
   background-size: cover;
@@ -26,7 +25,9 @@
 
 }
 
-@media screen and (min-width: 48em) {
+/* ||  MEDIA */
+
+@media screen and (min-width: 64em) {
   .main-layout {
     display: flex;
     padding-top: 180px;
@@ -37,7 +38,7 @@
     margin: 3rem 5rem 3rem 3rem;
     height: 400px;
     max-width: 460px;
-    border-radius: 4px;
+    border-radius: 5px;
   }
  
   .user {

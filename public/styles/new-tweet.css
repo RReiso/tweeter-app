@@ -74,7 +74,7 @@
 }
 
 .tweet-btn:focus-visible, .tweet-btn:active {
-	box-shadow: 0 0 0 0.2rem #2b3a6d;
+	box-shadow: 0 0 0 0.2rem #7a7acc;
 }
 
 .red {

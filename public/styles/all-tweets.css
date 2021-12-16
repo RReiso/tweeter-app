@@ -1,8 +1,9 @@
 .tweet{
+  background-color: #e6e3df;
   font-weight: 600;
-  border: 3px solid var(--color-grey);
+  border: 3px solid var(--color-accent);
   padding: 1rem;
-  border-radius: 40px 40px 3px 3px;
+  border-radius: 10px;
   margin: 3rem 0;
 }
 
@@ -13,7 +14,7 @@
 }
 
 .tweet header {
-  border-bottom: 3px solid var(--color-grey);
+  border-bottom: 3px solid var(--color-accent);
   padding: 0.5rem;
 }
 
