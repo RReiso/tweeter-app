@@ -14,9 +14,11 @@ This is a simple Twitter clone that was built as a week 4 front-end project for 
 ## Key Features
 * Create tweets
 * AJAX GET and POST requests to display and save tweets
-* Animated navbar and 'back to top' buttons
+* Animated navbar button and 'back to top' button
+* Slide in/out tweet composition area
 * Error messages on tweet submission
 * Updated tweet character count
+* Clear focus styles on all interactive elements for web accessibility 
 * Mobile responsive
 
 ## Project Screenshots
