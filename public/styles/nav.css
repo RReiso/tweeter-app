@@ -10,7 +10,7 @@ nav{
 }
 
 .logo-text {
-  font-family: Bungee;
+  font-family: var(--font-accent);
 }
 
 .nav-right{
@@ -21,9 +21,18 @@ nav{
   height: 100px;
   font-size: 1rem;
   cursor: pointer;
+  background-color: inherit;
+  outline: none;
+  border: none;
+  color: inherit;
+}
+
+.nav-right:focus-visible {
+  box-shadow: 0 0 0 0.2rem var(--color-light-text);
 }
 
 .double-arrow{
+  
   padding-top: 1rem;
   cursor: pointer;
   color: red;
@@ -41,7 +50,7 @@ nav{
 
 @media screen and (min-width: 22em) {
   .nav-right{
-    font-size: inherit;
+    font-size: 1.5rem;
   }
 }
 

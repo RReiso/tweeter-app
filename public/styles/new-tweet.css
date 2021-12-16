@@ -44,11 +44,11 @@
 }
 
 .tweet-input textarea:focus-visible {
-  border-bottom: 4px solid var(--color-primary);
+  border-bottom: 5px solid var(--color-primary);
 }
 
 .tweet-submit {
-  font-family: Bungee;
+  font-family: var(--font-accent);
   padding: 1rem 0;
   display: flex;
   justify-content: space-between;

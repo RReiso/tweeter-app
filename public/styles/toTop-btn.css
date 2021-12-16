@@ -24,3 +24,12 @@
 #toTop:active {
   box-shadow: 0 0 0 0.2rem #29644f;
 }
+
+@media screen and (min-width: 64em) {
+  nav{
+    background-color: var(--color-accent);
+    -webkit-box-shadow: 0px 4px 10px -3px #4A4A4A;
+    box-shadow: 0px 4px 10px -3px #4A4A4A;
+    padding: 0 2rem;
+  }
+}
