@@ -44,7 +44,6 @@ $(document).ready(function() {
   // reset new-tweet creation area and display tweets
   const renderTweets = (tweets) => {
     $(".counter").text("140");
-    $(".error").fadeOut("fast");
     $(".all-tweets").empty();
     $("#tweet-text").val("");
     for (let tweet of tweets) {
@@ -62,12 +61,18 @@ $(document).ready(function() {
     if (tweetText.trim() === "") {
       $(".error").text("Tweet cannot be empty!");
       $(".error").fadeIn("fast");
+      setTimeout(() => {
+        $(".error").fadeOut("fast");
+      }, 3000);
       return;
     }
     
     if (tweetText.length > 140) {
       $(".error").text("Tweet is too long!");
       $(".error").fadeIn("fast");
+      setTimeout(() => {
+        $(".error").fadeOut("fast");
+      }, 3000);
       return;
     }
     
