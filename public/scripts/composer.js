@@ -1,7 +1,7 @@
 $(document).ready(function() {
   
   // display the remaining character number
-  $("#tweet-text").on("keyup", function(e) {
+  $("#tweet-text").on("input", function(e) {
     const textLength = $(this).val().length;
     const remainingChars = 140 - textLength;
     const counter = $(this).parent().siblings(".tweet-submit").children(".counter");
